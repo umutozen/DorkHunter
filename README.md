@@ -46,6 +46,22 @@ CENSYS_API_SECRET="YOUR_CENSYS_API_SECRET_HERE"
 
 ---
 
+## 🐳 Docker Usage
+Don't want to install Python dependencies? You can seamlessly run DorkHunter using Docker!
+
+**1. Build the image:**
+```bash
+docker build -t dorkhunter .
+```
+
+**2. Run it interactively:**
+```bash
+docker run -it --rm --env-file .env -v ${PWD}:/app dorkhunter
+```
+*(This commands runs DorkHunter, maps your `.env` file credentials dynamically, and saves the output `targets.txt` to your host machine).*
+
+---
+
 ## 🎮 Usage
 
 Simply run the main python script:
